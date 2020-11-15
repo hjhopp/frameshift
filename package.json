@@ -20,6 +20,7 @@
         "electron": "^10.1.5",
         "eslint-config-arenanet": "^5.1.0",
         "jest": "^26.6.3",
+        "puppeteer": "^5.4.1",
         "rollup": "^2.33.2",
         "rollup-plugin-livereload": "^2.0.0",
         "rollup-plugin-svelte": "^6.1.1",
