@@ -1,17 +1,16 @@
-const { app, BrowserWindow, nativeTheme } = require("electron");
+const { app, BrowserWindow } = require("electron");
 
 function createWindow() {
     const win = new BrowserWindow({
         width: 800,
         height: 600,
+        icon: "public/favicon2.png",
         webPreferences: {
             nodeIntegration: true,
         },
     });
 
     win.loadFile("public/index.html");
-
-    nativeTheme.themeSource = "light";
 }
 
 app.whenReady().then(createWindow);
