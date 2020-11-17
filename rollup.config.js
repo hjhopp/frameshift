@@ -1,6 +1,7 @@
 const production = !process.env.ROLLUP_WATCH;
 
 const { preprocess, processor } = require("@modular-css/svelte")({
+    namer: false,
     rewrite: false,
     map: !production ? { inline: false } : false
 });
@@ -11,7 +12,8 @@ export default {
         sourcemap: true,
         format: "iife",
         name: "app",
-        file: "public/build/bundle.js"
+        file: "public/build/bundle.js",
+        assetFileNames: "style/[name][extname]"
     },
     plugins: [
         require("@rollup/plugin-commonjs")(),
