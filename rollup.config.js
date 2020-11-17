@@ -13,7 +13,7 @@ export default {
         format: "iife",
         name: "app",
         file: "public/build/bundle.js",
-        assetFileNames: "style/[name][extname]"
+        assetFileNames: "[name][extname]"
     },
     plugins: [
         require("@rollup/plugin-commonjs")(),
