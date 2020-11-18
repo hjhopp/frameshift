@@ -16,7 +16,7 @@
     }
 </script>
 
-<link stylesheet href="../layout.css" />
+<link rel="stylesheet" href="../layout.css" />
 
 <div>
     {#each buttons as button}

@@ -1,7 +1,3 @@
-<style>
-    h1 {
-        font-family: VtksHunt;
-    }
-</style>
+<link stylesheet href="./styles/globals.css">
 
 <h1>Frameshift</h1>
