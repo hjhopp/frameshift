@@ -1,7 +1,14 @@
 {
-    "extends": "arenanet",
+    "extends": ["arenanet"],
     "parserOptions": {
         "ecmaVersion": 6,
         "sourceType": "module"
-    }
+    },
+    "plugins": ["svelte3"],
+    "overrides": [
+        {
+            "files": ["**/*.svelte"],
+            "processor": "svelte3/svelte3"
+        }
+    ]
 }

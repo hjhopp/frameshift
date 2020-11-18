@@ -1,43 +1,43 @@
 const production = !process.env.ROLLUP_WATCH;
 
 const { preprocess, processor } = require("@modular-css/svelte")({
-    namer: false,
-    rewrite: false,
-    map: !production ? { inline: false } : false
+    namer   : false,
+    rewrite : false,
+    map     : !production ? { inline : false } : false
 });
 
-export default {
-    input: "src/main.js",
-    output: {
-        sourcemap: true,
-        format: "iife",
-        name: "app",
-        file: "public/build/bundle.js",
-        assetFileNames: "[name][extname]"
+export default{
+    input  : "src/main.js",
+    output : {
+        sourcemap      : true,
+        format         : "iife",
+        name           : "app",
+        file           : "public/build/bundle.js",
+        assetFileNames : "[name][extname]"
     },
-    plugins: [
+    plugins : [
         require("@rollup/plugin-commonjs")(),
 
         require("@rollup/plugin-node-resolve").nodeResolve({
-            browser: true,
-            dedupe: ["svelte"]
+            browser : true,
+            dedupe  : [ "svelte" ]
         }),
 
         require("rollup-plugin-svelte")({
             preprocess,
-            dev: !production,
-            extensions: [".svelte"],
-            css: false
+            dev        : !production,
+            extensions : [ ".svelte" ],
+            css        : false
         }),
 
         require("@modular-css/rollup")({
             processor,
-            json: true,
-            meta: true,
-            namedExports: false
+            json         : true,
+            meta         : true,
+            namedExports : false
         })
     ],
-    watch: {
-        clearScreen: false
+    watch : {
+        clearScreen : false
     }
 };
