@@ -1,14 +1,14 @@
 <script>
     const buttons = [
         {
-            name: "New",
+            name : "+",
         },
         {
-            name: "Archive",
+            name : "Dreams",
         },
         {
-            name: "Statistics",
-        },
+            name : "Statistics",
+        }
     ];
 
     function handleClick() {
@@ -16,7 +16,24 @@
     }
 </script>
 
-<link rel="stylesheet" href="../layout.css" />
+<style>
+    div {
+        position: fixed;
+
+        left: 0;
+        top: 0;
+        width: 50px;
+        height: 100vh;
+    }
+
+    button {
+        display: block;
+
+        width: 45px;
+        height: 45px;
+        margin: 0.5em;
+    }
+</style>
 
 <div>
     {#each buttons as button}

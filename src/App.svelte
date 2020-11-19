@@ -1,3 +1,9 @@
-<link stylesheet href="./styles/globals.css">
+<script>
+    import Layout from "./components/layout/layout.svelte";
+</script>
 
-<h1>Frameshift</h1>
+<link rel="stylesheet" href="./styles/globals.css">
+
+<div>
+    <Layout />
+</div>

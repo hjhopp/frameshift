@@ -7,8 +7,11 @@
     "plugins": ["svelte3"],
     "overrides": [
         {
-            "files": ["**/*.svelte"],
+            "files": "*.svelte",
             "processor": "svelte3/svelte3"
         }
-    ]
+    ],
+    "env": {
+        "jest/globals": true
+    }
 }
