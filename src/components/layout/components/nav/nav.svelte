@@ -18,10 +18,10 @@
 
 <style>
     div {
-        position: fixed;
+        /* position: fixed; */
 
-        left: 0;
-        top: 0;
+        /* left: 0;
+        top: 0; */
         width: 50px;
         height: 100vh;
     }

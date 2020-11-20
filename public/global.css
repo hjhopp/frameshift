@@ -71,5 +71,10 @@ button:focus {
 
 @font-face {
     font-family: VtksHunt;
-    src: url(fonts/VtksHunt.ttf) format("ttf");
+    src: url(fonts/VtksHunt.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: Tox;
+    src: url(fonts/ToxTypewriter.ttf) format("truetype");
 }
