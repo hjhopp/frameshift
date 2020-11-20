@@ -1,9 +1,16 @@
+const path = require("path");
+
 const { app, BrowserWindow } = require("electron");
+
+require("electron-reload")(__dirname, {
+    electron         : path.join(__dirname, "./node_modules", ".bin", "electron"),
+    awaitWriteFinish : true
+});
 
 function createWindow() {
     const win = new BrowserWindow({
-        width          : 1920,
-        height         : 1080,
+        width          : 800,
+        height         : 600,
         icon           : "public/favicon2.png",
         webPreferences : {
             nodeIntegration : true,
