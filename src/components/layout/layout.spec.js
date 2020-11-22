@@ -16,4 +16,4 @@ describe("Layout", () => {
             expect(getByTestId(`${btn}-nav`)).toBeTruthy();
         });
     })
-})
+});

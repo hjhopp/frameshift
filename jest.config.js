@@ -5,7 +5,7 @@ module.exports = {
     },
     moduleFileExtensions : [ "js", "svelte" ],
     collectCoverageFrom: [ "js", "svelte"],
-    coveragePathIgnorePatterns : ["node_modules"],
+    coveragePathIgnorePatterns : ["/node_modules/"],
     coverageThreshold: {
         global: {
             statements: 100,
