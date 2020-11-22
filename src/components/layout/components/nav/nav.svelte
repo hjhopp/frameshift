@@ -37,6 +37,6 @@
 
 <div>
     {#each buttons as button}
-        <button on:click={handleClick}>{button.name[0]}</button>
+        <button data-testid={`${button.name}-nav`} on:click={handleClick}>{button.name[0]}</button>
     {/each}
 </div>
