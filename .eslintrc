@@ -1,18 +1,33 @@
 {
-    "extends": ["arenanet"],
+    "extends": [
+        "arenanet",
+        "plugin:jest/recommended",
+        "plugin:jest/style"
+    ],
     "parserOptions": {
         "ecmaVersion": 6,
         "sourceType": "module"
     },
-    "plugins": ["svelte3"],
+    "plugins": [
+        "svelte3",
+        "jest"
+    ],
     "env": {
         "browser": true,
-        "node": true
+        "node": true,
+        "jest/globals": true
     },
     "overrides": [
         {
             "files": "*.svelte",
             "processor": "svelte3/svelte3"
         }
-    ]
+    ],
+    "rules": {
+        "jest/no-disabled-tests": "warn",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/prefer-to-have-length": "warn",
+        "jest/valid-expect": "error"
+      }
 }
