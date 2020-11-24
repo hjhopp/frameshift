@@ -13,8 +13,8 @@
         "lint": "eslint ."
     },
     "lint-staged": {
-        "*.js": ["eslint --fix", "git add"],
-        "*.svelte": ["eslint --fix", "git add"]
+        "*.js": "eslint --fix",
+        "*.svelte": "eslint --fix"
     },
     "keywords": [],
     "author": "",
