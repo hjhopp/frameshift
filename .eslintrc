@@ -15,7 +15,7 @@
     "env": {
         "browser": true,
         "node": true,
-        "jest/globals": true
+        "jest": true
     },
     "overrides": [
         {
@@ -29,5 +29,10 @@
         "jest/no-identical-title": "error",
         "jest/prefer-to-have-length": "warn",
         "jest/valid-expect": "error"
-      }
+    },
+    "settings": {
+        "jest": {
+            "version": 26
+        }
+    }
 }
