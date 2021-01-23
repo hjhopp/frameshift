@@ -47,6 +47,14 @@ export default{
             dedupe  : [ "svelte" ]
         }),
 
+        require("@rollup/plugin-alias")({
+            entries : [
+                { find : "app", replacement : "./src" },
+                { find : "components", replacement : "./src/components" },
+                { find : "statechart", replacement : "./src/statechart" }
+            ]
+        }),
+
         require("rollup-plugin-svelte")({
             dev        : !production,
             extensions : [ ".svelte" ],

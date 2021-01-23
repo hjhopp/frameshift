@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "es2017", // match this with eslintrc
+        "allowSyntheticDefaultImports": false,
+        "baseUrl": "./",
+        "paths": {
+            "components/*": ["src/components/*"],
+            "app/*": ["src/*"],
+            "statechart/*": ["src/statechart/*"]
+        }
+    },
+    "exclude": ["node_modules", "coverage", "build"]
+}
