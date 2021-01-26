@@ -1,4 +1,4 @@
-import Layout from "./layout.svelte";
+import Layout     from "./layout.svelte";
 import { render } from "@testing-library/svelte";
 
 describe("Layout", () => {
@@ -10,10 +10,10 @@ describe("Layout", () => {
 
     it("should render nav bar", () => {
         const { getByTestId } = render(Layout);
-        const buttons = [ "+", "Dreams", "Statistics" ];
+        const buttons         = [ "+", "Dreams", "Statistics" ];
 
         buttons.forEach((btn) => {
             expect(getByTestId(`${btn}-nav`)).toBeTruthy();
         });
-    })
+    });
 });

@@ -4,9 +4,7 @@ module.exports = {
         "^.+\\.js"      : "babel-jest"
     },
     moduleNameMapper : {
-        "^components(.*)$" : "<rootDir>/src/components$1",
-        "^app(.*)$"        : "<rootDir>/src$1",
-        "^statechart(.*)$" : "<rootDir>/src/statechart$1"
+        "^src(.*)$" : "<rootDir>/src$1",
     },
     moduleFileExtensions       : [ "js", "svelte" ],
     collectCoverageFrom        : [ "js", "svelte" ],

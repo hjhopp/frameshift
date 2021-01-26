@@ -49,9 +49,7 @@ export default{
 
         require("@rollup/plugin-alias")({
             entries : [
-                { find : "app", replacement : "./src" },
-                { find : "components", replacement : "./src/components" },
-                { find : "statechart", replacement : "./src/statechart" }
+                { find : "src", replacement : "./src" }
             ]
         }),
 

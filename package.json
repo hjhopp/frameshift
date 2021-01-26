@@ -43,7 +43,8 @@
         "sirv": "^1.0.7",
         "svelte": "^3.29.6",
         "svelte-jester": "^1.1.5",
-        "xstate": "^4.14.0"
+        "xstate": "^4.14.0",
+        "xstate-component-tree": "^3.3.1"
     },
     "dependencies": {
         "electron": "^11.0.3"
