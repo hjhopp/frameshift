@@ -30,3 +30,9 @@ export default Machine({
         }
     }
 });
+
+export const states = {
+    HOME     : "HOME",
+    NEWDREAM : "NEWDREAM",
+    ARCHIVE  : "ARCHIVE"
+};

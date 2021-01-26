@@ -1,6 +1,8 @@
 <script>
-    import Nav  from "./components/nav/nav.svelte";
-    import Main from "./components/main/main.svelte";
+    import Nav from "./components/nav/nav.svelte";
+    // import Main from "./components/main/main.svelte";
+
+    import Children from "src/components/children.svelte";
 </script>
 
 <style>
@@ -11,5 +13,5 @@
 
 <main>
     <Nav />
-    <Main />
+    <Children />
 </main>
