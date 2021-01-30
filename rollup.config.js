@@ -33,7 +33,7 @@ function serve() {
 }
 
 export default{
-    input  : "src/main.js",
+    input  : "client/main.js",
     output : {
         sourcemap      : true,
         format         : "iife",
@@ -51,7 +51,7 @@ export default{
 
         require("@rollup/plugin-alias")({
             entries : [
-                { find : "src", replacement : path.join(__dirname, "src") }
+                { find : "client", replacement : path.join(__dirname, "client") }
             ]
         }),
 

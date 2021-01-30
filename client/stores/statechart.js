@@ -2,7 +2,7 @@ import { writable }  from "svelte/store";
 import { interpret } from "xstate";
 import ComponentTree from "xstate-component-tree";
 
-import FrameshiftStatechart from "src/statechart/frameshift";
+import FrameshiftStatechart from "client/statechart/frameshift";
 
 const service = interpret(FrameshiftStatechart);
 const tree    = writable([]);

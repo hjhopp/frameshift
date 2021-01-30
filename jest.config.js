@@ -4,7 +4,7 @@ module.exports = {
         "^.+\\.js"      : "babel-jest"
     },
     moduleNameMapper : {
-        "^src(.*)$" : "<rootDir>/src$1",
+        "^client(.*)$" : "<rootDir>/client$1",
     },
     moduleFileExtensions       : [ "js", "svelte" ],
     collectCoverageFrom        : [ "js", "svelte" ],

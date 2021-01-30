@@ -1,5 +1,5 @@
 <script>
-    import { tree } from "src/stores/statechart";
+    import { tree } from "client/stores/statechart";
 </script>
 
 {#each $tree as { component, props, children }}

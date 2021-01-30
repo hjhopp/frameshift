@@ -1,8 +1,8 @@
 import { Machine } from "xstate";
 
-import Home     from "src/pages/home/home.svelte";
-import NewDream from "src/pages/new-dream/new-dream.svelte";
-import Archive  from "src/pages/dream-archive/archive.svelte";
+import Home     from "client/pages/home/home.svelte";
+import NewDream from "client/pages/new-dream/new-dream.svelte";
+import Archive  from "client/pages/dream-archive/archive.svelte";
 
 export const events = {
     HOME     : "HOME",

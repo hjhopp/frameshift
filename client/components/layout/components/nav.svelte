@@ -1,6 +1,6 @@
 <script>
-    import { events } from "src/statechart/frameshift";
-    import { send }   from "src/stores/statechart";
+    import { events } from "client/statechart/frameshift";
+    import { send }   from "client/stores/statechart";
 
     const buttons = [
         {
