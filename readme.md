@@ -1,6 +1,14 @@
-# Frameshift Client
+# Frameshift
 
-Dream journal, powered by Electron and Svelte. Tested with Jest.
+Dream journal.
+
+# Tech
+
+- Electron
+- Express
+- Svelte
+- X-State
+- Jest
 
 ## Set up
 
@@ -8,4 +16,3 @@ Dream journal, powered by Electron and Svelte. Tested with Jest.
 npm ci
 npm start
 ```
-
