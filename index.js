@@ -2,6 +2,8 @@ const path = require("path");
 
 const { app, BrowserWindow } = require("electron");
 
+require("./server");
+
 require("electron-reload")(__dirname, {
     electron         : path.join(__dirname, "./node_modules", ".bin", "electron"),
     awaitWriteFinish : true
@@ -17,7 +19,8 @@ function createWindow() {
         },
     });
 
-    win.loadFile("public/index.html");
+    // win.loadFile("public/index.html");
+    win.loadURL("http://localhost:8888");
 }
 
 app.whenReady().then(createWindow);
