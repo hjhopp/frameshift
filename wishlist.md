@@ -11,6 +11,10 @@
 
 1.  Can use without a mouse
 
+## Architecture
+
+1.  Backend analysis will probably be expensive
+
 ## Storage
 
 1.  Locally if no wish to sign up
