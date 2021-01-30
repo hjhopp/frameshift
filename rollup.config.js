@@ -1,3 +1,5 @@
+import path from "path";
+
 const production = !process.env.ROLLUP_WATCH;
 
 function serve() {
@@ -49,7 +51,7 @@ export default{
 
         require("@rollup/plugin-alias")({
             entries : [
-                { find : "src", replacement : "./src" }
+                { find : "src", replacement : path.join(__dirname, "src") }
             ]
         }),
 

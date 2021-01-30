@@ -10,7 +10,7 @@ describe("Layout", () => {
 
     it("should render nav bar", () => {
         const { getByTestId } = render(Layout);
-        const buttons         = [ "+", "Dreams", "Statistics" ];
+        const buttons         = [ "+", "Dreams" ];
 
         buttons.forEach((btn) => {
             expect(getByTestId(`${btn}-nav`)).toBeTruthy();

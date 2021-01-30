@@ -1,27 +1,28 @@
 <script>
+    import { events } from "src/statechart/frameshift";
+    import { send }   from "src/stores/statechart";
+
     const buttons = [
         {
             name : "+",
+            send : events.NEWDREAM
         },
         {
             name : "Dreams",
+            send : events.ARCHIVE
         },
-        {
-            name : "Statistics",
-        }
+        // {
+        //     name : "Statistics",
+        // }
     ];
 
-    function handleClick() {
-        // set active state of view
+    function handleClick(button) {
+        send(button.send);
     }
 </script>
 
 <style>
     div {
-        /* position: fixed; */
-
-        /* left: 0;
-        top: 0; */
         width: 50px;
         height: 100vh;
     }
@@ -37,6 +38,6 @@
 
 <div>
     {#each buttons as button}
-        <button data-testid={`${button.name}-nav`} on:click={handleClick}>{button.name[0]}</button>
+        <button data-testid={`${button.name}-nav`} on:click={() => handleClick(button)}>{button.name[0]}</button>
     {/each}
 </div>

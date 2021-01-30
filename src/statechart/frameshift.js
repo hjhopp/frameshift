@@ -4,7 +4,19 @@ import Home     from "src/pages/home/Home.svelte";
 import NewDream from "src/pages/new-dream/NewDream.svelte";
 import Archive  from "src/pages/dream-archive/Archive.svelte";
 
-export default Machine({
+export const events = {
+    HOME     : "HOME",
+    NEWDREAM : "NEWDREAM",
+    ARCHIVE  : "ARCHIVE"
+};
+
+const states = {
+    HOME     : "home",
+    NEWDREAM : "newDream",
+    ARCHIVE  : "archive"
+};
+
+export default Machine({ // eslint-disable-line
     id      : "frameshift",
     initial : "home",
     on      : {
@@ -19,20 +31,22 @@ export default Machine({
             }
         },
         newDream : {
+            on : {
+                [events.NEWDREAM] : states.HOME,
+                [events.ARCHIVE]  : states.ARCHIVE
+            },
             meta : {
                 component : NewDream
             }
         },
         archive : {
+            on : {
+                [events.ARCHIVE]  : states.HOME,
+                [events.NEWDREAM] : states.NEWDREAM
+            },
             meta : {
                 component : Archive
             }
         }
     }
 });
-
-export const states = {
-    HOME     : "HOME",
-    NEWDREAM : "NEWDREAM",
-    ARCHIVE  : "ARCHIVE"
-};

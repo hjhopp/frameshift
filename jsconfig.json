@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
         "target": "es2017", // match this with eslintrc
+        "module": "commonjs",
         "allowSyntheticDefaultImports": false,
         "baseUrl": "./",
         "paths": {
