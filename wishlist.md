@@ -6,6 +6,7 @@
 2.  Voice to text
 3.  Sentiment analysis
 4.  Tagging (characters, locations, symbols, etc)
+5.  Sync with sleep tracker
 
 ## Accessibility
 

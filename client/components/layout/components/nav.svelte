@@ -5,7 +5,7 @@
     const buttons = [
         {
             name : "+",
-            send : events.NEWDREAM
+            send : events.DREAMFORM
         },
         {
             name : "Dreams",
@@ -23,7 +23,7 @@
 
 <style>
     div {
-        width: 50px;
+        width: 61px;
         height: 100vh;
     }
 
