@@ -5,7 +5,7 @@ describe("Layout", () => {
     it("should render initial welcome screen", () => {
         const { getByText } = render(Layout);
 
-        getByText("Frameshift");
+        expect(getByText("Frameshift")).toBeTruthy();
     });
 
     it("should render nav bar", () => {
