@@ -33,6 +33,8 @@
         width: 45px;
         height: 45px;
         margin: 0.5em;
+
+        border-radius: 50%;
     }
 </style>
 

@@ -1,3 +1,18 @@
+<style>
+    div {
+        width: 100%;
+        height: 95%;
+        background-color: rgb(255, 255, 255, 0.5);
+        border-radius: 5px;
+        padding: 0.5em;
+    }
+
+    input,
+    textarea {
+        width : 100%;
+    }
+</style>
+
 <div>
     <form>
         <label for="title">Title</label>
@@ -13,18 +28,3 @@
         <button>Clear</button>
     </form>
 </div>
-
-<style>
-    div {
-        width: 100%;
-        height: 95%;
-        background-color: rgb(255, 255, 255, 0.5);
-        border-radius: 5px;
-        padding: 0.5em;
-    }
-
-    input,
-    textarea {
-        width : 100%;
-    }
-</style>
