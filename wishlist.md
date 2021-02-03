@@ -36,6 +36,7 @@
 
 1.  Get assistance from someone who actually designs stuff
 2.  Image compression if user provides own image
+3.  Various ways to sort/view archive
 
 ## Mobile
 

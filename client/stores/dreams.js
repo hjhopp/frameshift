@@ -1,10 +1,10 @@
 import { writable } from "svelte/store";
 
-import dreams      from "client/data/dreams";
+import mockDreams  from "client/data/dreams";
 import randomImage from "client/data/images";
 
 function createDream() {
-    const { subscribe, set, update } = writable(dreams);
+    const { subscribe, update } = writable(mockDreams);
 
     return {
         subscribe,
@@ -20,4 +20,4 @@ function createDream() {
     };
 }
 
-export const dreamStore = createDream();
+export const dreams = createDream();
