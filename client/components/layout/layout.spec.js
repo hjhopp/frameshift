@@ -1,5 +1,7 @@
-import Layout     from "./layout.svelte";
-import { render } from "@testing-library/svelte";
+import Layout                from "./layout.svelte";
+import { render, fireEvent } from "@testing-library/svelte";
+
+const buttons = [ "+", "Dreams" ];
 
 describe("Layout", () => {
     it("should render initial welcome screen", () => {
@@ -10,7 +12,6 @@ describe("Layout", () => {
 
     it("should render nav bar", () => {
         const { getByTestId } = render(Layout);
-        const buttons         = [ "+", "Dreams" ];
 
         buttons.forEach((btn) => {
             expect(getByTestId(`${btn}-nav`)).toBeTruthy();

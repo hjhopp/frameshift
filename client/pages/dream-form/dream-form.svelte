@@ -13,7 +13,7 @@
     }
 </style>
 
-<div>
+<div data-testid="dream-form">
     <form>
         <label for="title">Title</label>
         <input type="text" name="title">
