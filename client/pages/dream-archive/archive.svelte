@@ -1,4 +1,6 @@
 <script>
+    import { fly } from "svelte/transition";
+
     import { dreams } from "client/stores/dreams";
 </script>
 
@@ -6,6 +8,8 @@
     .archive {
         display: flex;
         flex-wrap: wrap;
+
+        position: absolute;
     }
 
     .dream {
@@ -24,7 +28,7 @@
 
 <div data-testid="archive" class="archive">
     {#each $dreams as dream}
-        <div class="dream">
+        <div class="dream" transition:fly="{{ y : 200, duration : 400 }}">
             <img src={dream.image} alt={dream.title}/>
         </div>
     {/each}

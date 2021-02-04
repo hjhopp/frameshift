@@ -1,3 +1,7 @@
+<script>
+    import { fade } from "svelte/transition";
+</script>
+
 <style>
     div {
         display: flex;
@@ -5,6 +9,8 @@
         align-items: center;
 
         width: 100%;
+
+        position: absolute;
     }
     h1 {
         font-family: VtksHunt;
@@ -22,7 +28,7 @@
     }
 </style>
 
-<div>
+<div transition:fade>
     <h1>Frameshift</h1>
     <h2>a dream journal</h2>
 </div>

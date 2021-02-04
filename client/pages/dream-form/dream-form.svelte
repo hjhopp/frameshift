@@ -1,10 +1,13 @@
+<script>
+    import { fly } from "svelte/transition";
+</script>
+
 <style>
     div {
-        width: 100%;
-        height: 95%;
         background-color: rgb(255, 255, 255, 0.5);
         border-radius: 5px;
         padding: 0.5em;
+        position: absolute;
     }
 
     input,
@@ -13,7 +16,7 @@
     }
 </style>
 
-<div data-testid="dream-form">
+<div data-testid="dream-form" transition:fly="{{ y : 200, duration : 400 }}">
     <form>
         <label for="title">Title</label>
         <input type="text" name="title">
