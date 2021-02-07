@@ -1,7 +1,7 @@
 <script>
     import { fly } from "svelte/transition";
 
-    import { form } from "client/stores/form";
+    import { form as dreamForm } from "client/stores/form";
 </script>
 
 <style>
@@ -25,13 +25,13 @@
 <div data-testid="dream-form" transition:fly="{{ y : 200, duration : 400 }}">
     <form>
         <label for="title">Title</label>
-        <input type="text" name="title" bind:value={$form.title}>
+        <input type="text" name="title" bind:value={$dreamForm.title}>
 
         <label for="date">Date</label>
-        <input type="date" name="date" bind:value={$form.date}>
+        <input type="date" name="date" bind:value={$dreamForm.date}>
 
         <label for="dream">Dream</label>
-        <textarea name="dream" rows="13" cols="30"  bind:value={$form.description}/>
+        <textarea name="dream" rows="13" cols="30"  bind:value={$dreamForm.description}/>
 
         <button>Save</button>
         <button>Clear</button>

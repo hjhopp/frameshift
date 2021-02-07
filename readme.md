@@ -14,5 +14,5 @@ Dream journal.
 
 ```
 npm ci
-npm start
+npm run dev
 ```
