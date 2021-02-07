@@ -2,6 +2,16 @@
     import { fly } from "svelte/transition";
 
     import { dreams } from "client/stores/dreams";
+    import { form }   from "client/stores/form";
+    import { send }   from "client/stores/statechart";
+
+    import { events } from "client/data/events";
+
+    function handleClick(dream) {
+        form.set(dream);
+
+        send(events.DREAMFORM);
+    }
 </script>
 
 <style>
@@ -52,7 +62,11 @@
 
 <div data-testid="archive" class="archive">
     {#each $dreams as dream}
-        <div class="dream" transition:fly="{{ y : 200, duration : 400 }}">
+        <div
+            class="dream"
+            transition:fly="{{ y : 200, duration : 400 }}"
+            on:click={() => handleClick(dream)}
+        >
             <img src={dream.image} alt={dream.title}/>
             <div class="title">
                 <h1>{dream.title}</h1>

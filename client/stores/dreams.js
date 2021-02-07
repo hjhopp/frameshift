@@ -20,4 +20,14 @@ function createDream() {
     };
 }
 
-export const dreams = createDream();
+const dreams = createDream();
+const schema = {
+    title       : "",
+    description : "",
+    date        : ""
+};
+
+export {
+    dreams,
+    schema
+};

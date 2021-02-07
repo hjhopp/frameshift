@@ -4,11 +4,7 @@ import Home      from "client/pages/home/home.svelte";
 import DreamForm from "client/pages/dream-form/dream-form.svelte";
 import Archive   from "client/pages/dream-archive/archive.svelte";
 
-export const events = {
-    HOME      : "HOME",
-    DREAMFORM : "DREAMFORM",
-    ARCHIVE   : "ARCHIVE"
-};
+import { events } from "client/data/events";
 
 const states = {
     HOME      : "home",
