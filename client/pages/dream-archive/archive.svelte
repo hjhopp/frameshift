@@ -13,20 +13,40 @@
     }
 
     .dream {
+        position: relative;
+
         width: 200px;
-        box-shadow: 0 0 5px black;
+        height: 150px;
         margin: 0.825em;
 
         border-radius: 3px;
+        box-shadow: 0 0 5px black;
+
+        cursor: pointer;
     }
 
     .dream:hover {
         box-shadow: inset 0 0 5px white;
     }
 
-    img {
+    .title {
+        position: absolute;
+        bottom: 13px;
+
         width: 100%;
-        height: 100%;
+
+        background-color: rgb(255, 255, 255, 0.5);
+    }
+
+    h1 {
+        margin: 0;
+        padding-left: 0.25em;
+    }
+
+    img {
+        position: absolute;
+
+        width: 100%;
     }
 </style>
 
@@ -34,6 +54,9 @@
     {#each $dreams as dream}
         <div class="dream" transition:fly="{{ y : 200, duration : 400 }}">
             <img src={dream.image} alt={dream.title}/>
+            <div class="title">
+                <h1>{dream.title}</h1>
+            </div>
         </div>
     {/each}
 </div>
