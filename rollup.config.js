@@ -19,7 +19,7 @@ function serve() {
 
             server = require("child_process").spawn(
                 "npm",
-                [ "run", "svelte-start", "--", "--dev" ],
+                [ "run", "start", "--", "--dev" ],
                 {
                     stdio : [ "ignore", "inherit", "inherit" ],
                     shell : true,
@@ -32,7 +32,7 @@ function serve() {
     };
 }
 
-export default{
+export default {
     input  : "client/main.js",
     output : {
         sourcemap      : true,

@@ -4,6 +4,9 @@
 
 <style>
     div {
+        width: 87%;
+        height: 92%;
+
         background-color: rgb(255, 255, 255, 0.5);
         border-radius: 5px;
         padding: 0.5em;
@@ -13,6 +16,7 @@
     input,
     textarea {
         width : 100%;
+        background-color:rgb(255, 255, 255, 0.85);
     }
 </style>
 
@@ -25,7 +29,7 @@
         <input type="date" name="date">
 
         <label for="dream">Dream</label>
-        <textarea name="dream" rows="4" cols="30" />
+        <textarea name="dream" rows="13" cols="30" />
 
         <button>Save</button>
         <button>Clear</button>

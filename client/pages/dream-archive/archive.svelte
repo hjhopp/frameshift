@@ -15,9 +15,13 @@
     .dream {
         width: 200px;
         box-shadow: 0 0 5px black;
-        margin: 0.5em;
+        margin: 0.825em;
 
         border-radius: 3px;
+    }
+
+    .dream:hover {
+        box-shadow: inset 0 0 5px white;
     }
 
     img {

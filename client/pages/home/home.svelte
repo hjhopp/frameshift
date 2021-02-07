@@ -22,7 +22,7 @@
         align-self: flex-end;
         font-family: Tox;
 
-        margin: 0 3.5em;
+        margin: 0;
     }
 </style>
 
