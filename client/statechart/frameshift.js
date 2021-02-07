@@ -32,7 +32,7 @@ export default Machine({ // eslint-disable-line
                 [events.ARCHIVE]   : states.ARCHIVE
             },
             meta : {
-                component : DreamForm
+                load : (context, { dream }) => [ DreamForm, { dream }]
             }
         },
         archive : {

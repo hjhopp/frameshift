@@ -2,15 +2,12 @@
     import { fly } from "svelte/transition";
 
     import { dreams } from "client/stores/dreams";
-    import { form }   from "client/stores/form";
     import { send }   from "client/stores/statechart";
 
     import { events } from "client/data/events";
 
     function handleClick(dream) {
-        form.set(dream);
-
-        send(events.DREAMFORM);
+        send(events.DREAMFORM, { dream });
     }
 </script>
 
