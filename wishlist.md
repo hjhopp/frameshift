@@ -38,6 +38,7 @@
 2.  Image compression if user provides own image
 3.  Various ways to sort/view archive
 4.  Scraper for stock images
+5.  On:hover archive page shows quick stats
 
 ## Mobile
 
