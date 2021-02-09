@@ -8,7 +8,7 @@ import { events, states } from "./consts";
 
 export default Machine({ // eslint-disable-line
     id      : "frameshift",
-    initial : "home",
+    initial : states.HOME,
     on      : states,
     context : {
         editing : false

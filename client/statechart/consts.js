@@ -1,8 +1,13 @@
 const events = {
+    // events that change pages
     HOME       : "HOME",
     CREATEFORM : "CREATEFORM",
-    EDITFORM   : "editForm",
-    ARCHIVE    : "ARCHIVE"
+    EDITFORM   : "EDITFORM",
+    ARCHIVE    : "ARCHIVE",
+
+    // events that do things
+    SAVE   : "SAVE",
+    CREATE : "CREATE"
 };
 
 const states = {

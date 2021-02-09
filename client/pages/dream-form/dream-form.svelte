@@ -1,13 +1,21 @@
 <script>
     import { fly } from "svelte/transition";
 
-    import { schema } from "client/stores/dreams";
+    import { dreams, schema } from "client/stores/dreams";
 
     export let dream = { ...schema };
     export let editing;
 
     // https://github.com/sveltejs/svelte/issues/4442
     $: dream = dream || { ...schema };
+
+    function handleSubmit() {
+        if (editing) {
+            return dreams.edit(dream);
+        }
+
+        return dreams.create(dream);
+    }
 </script>
 
 <style>
@@ -29,7 +37,7 @@
 </style>
 
 <div data-testid="dream-form" transition:fly="{{ y : 200, duration : 400 }}">
-    <form>
+    <form on:submit|preventDefault={handleSubmit}>
         <label for="title">Title</label>
         <input type="text" name="title" bind:value={dream.title}>
 

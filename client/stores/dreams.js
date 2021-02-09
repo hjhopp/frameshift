@@ -16,6 +16,18 @@ function createDream() {
                     image : randomImage()
                 }
             ]);
+        },
+        edit : (data) => {
+            update((dreams) => {
+                const idx = dreams.indexOf((dream) => dream.id === data.id);
+
+                dreams[idx] = {
+                    ...dreams[idx],
+                    ...data
+                };
+
+                return dreams;
+            });
         }
     };
 }
