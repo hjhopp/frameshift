@@ -42,6 +42,8 @@ new ComponentTree(service, (children) => {
 
 service.start();
 
+window.service = service;
+
 export {
     tree,
     send

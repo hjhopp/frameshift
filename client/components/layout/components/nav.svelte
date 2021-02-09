@@ -1,12 +1,12 @@
 <script>
-    import { events } from "client/data/events";
+    import { events } from "client/statechart/consts";
 
     import { send } from "client/stores/statechart";
 
     const buttons = [
         {
             name : "+",
-            send : events.DREAMFORM
+            send : events.CREATEFORM
         },
         {
             name : "Dreams",

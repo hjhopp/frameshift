@@ -4,6 +4,8 @@
     import { schema } from "client/stores/dreams";
 
     export let dream = { ...schema };
+
+    $: dream = dream || { ...schema };
 </script>
 
 <style>

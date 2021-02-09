@@ -22,6 +22,7 @@ function createDream() {
 
 const dreams = createDream();
 const schema = {
+    id          : "",
     title       : "",
     description : "",
     date        : ""

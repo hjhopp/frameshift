@@ -1,35 +1,34 @@
-import { Machine } from "xstate";
+import { Machine, actions } from "xstate";
 
 import Home      from "client/pages/home/home.svelte";
 import DreamForm from "client/pages/dream-form/dream-form.svelte";
 import Archive   from "client/pages/dream-archive/archive.svelte";
 
-import { events } from "client/data/events";
-
-const states = {
-    HOME      : "home",
-    DREAMFORM : "dreamForm",
-    ARCHIVE   : "archive"
-};
+import { events, states } from "./consts";
 
 export default Machine({ // eslint-disable-line
     id      : "frameshift",
     initial : "home",
-    on      : {
-        HOME      : "home",
-        DREAMFORM : "dreamForm",
-        ARCHIVE   : "archive"
-    },
-    states : {
+    on      : states,
+    states  : {
         home : {
             meta : {
                 component : Home
             }
         },
-        dreamForm : {
+        createForm : {
             on : {
-                [events.DREAMFORM] : states.HOME,
-                [events.ARCHIVE]   : states.ARCHIVE
+                [events.CREATEFORM] : states.HOME,
+                [events.ARCHIVE]    : states.ARCHIVE
+            },
+            meta : {
+                component : DreamForm
+            }
+        },
+        editForm : {
+            on : {
+                [events.CREATEFORM] : states.CREATEFORM,
+                [events.ARCHIVE]    : states.ARCHIVE
             },
             meta : {
                 load : (context, { dream }) => [ DreamForm, { dream }]
@@ -37,8 +36,9 @@ export default Machine({ // eslint-disable-line
         },
         archive : {
             on : {
-                [events.ARCHIVE]   : states.HOME,
-                [events.DREAMFORM] : states.DREAMFORM
+                [events.ARCHIVE]    : states.HOME,
+                [events.CREATEFORM] : states.CREATEFORM,
+                [events.EDITFORM]   : states.EDITFORM
             },
             meta : {
                 component : Archive

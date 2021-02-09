@@ -4,10 +4,10 @@
     import { dreams } from "client/stores/dreams";
     import { send }   from "client/stores/statechart";
 
-    import { events } from "client/data/events";
+    import { events } from "client/statechart/consts";
 
     function handleClick(dream) {
-        send(events.DREAMFORM, { dream });
+        send(events.EDITFORM, { dream });
     }
 </script>
 
