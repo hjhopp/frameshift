@@ -4,7 +4,9 @@
     import { schema } from "client/stores/dreams";
 
     export let dream = { ...schema };
+    export let editing;
 
+    // https://github.com/sveltejs/svelte/issues/4442
     $: dream = dream || { ...schema };
 </script>
 
@@ -37,7 +39,7 @@
         <label for="dream">Dream</label>
         <textarea name="dream" rows="13" cols="30"  bind:value={dream.description}/>
 
-        <button>Save</button>
+        <button>{editing ? "Save" : "Create"}</button>
         <button>Clear</button>
     </form>
 </div>

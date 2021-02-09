@@ -10,7 +10,10 @@ export default Machine({ // eslint-disable-line
     id      : "frameshift",
     initial : "home",
     on      : states,
-    states  : {
+    context : {
+        editing : false
+    },
+    states : {
         home : {
             meta : {
                 component : Home
@@ -27,18 +30,39 @@ export default Machine({ // eslint-disable-line
         },
         editForm : {
             on : {
-                [events.CREATEFORM] : states.CREATEFORM,
-                [events.ARCHIVE]    : states.ARCHIVE
+                [events.CREATEFORM] : {
+                    target  : states.CREATEFORM,
+                    actions : [
+                        actions.assign({
+                            editing : false
+                        })
+                    ]
+                },
+                [events.ARCHIVE] : states.ARCHIVE
             },
             meta : {
-                load : (context, { dream }) => [ DreamForm, { dream }]
+                load : ({ editing }, { dream }) => [ DreamForm, { dream, editing }]
             }
         },
         archive : {
             on : {
                 [events.ARCHIVE]    : states.HOME,
-                [events.CREATEFORM] : states.CREATEFORM,
-                [events.EDITFORM]   : states.EDITFORM
+                [events.CREATEFORM] : {
+                    target  : states.CREATEFORM,
+                    actions : [
+                        actions.assign({
+                            editing : false
+                        })
+                    ]
+                },
+                [events.EDITFORM] : {
+                    target  : states.EDITFORM,
+                    actions : [
+                        actions.assign({
+                            editing : true
+                        })
+                    ]
+                }
             },
             meta : {
                 component : Archive
