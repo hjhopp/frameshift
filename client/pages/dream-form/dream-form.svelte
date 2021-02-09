@@ -2,6 +2,9 @@
     import { fly } from "svelte/transition";
 
     import { dreams, schema } from "client/stores/dreams";
+    import { send }           from "client/stores/statechart";
+
+    import { events } from "client/statechart/consts";
 
     export let dream = { ...schema };
     export let editing;
@@ -11,10 +14,14 @@
 
     function handleSubmit() {
         if (editing) {
-            return dreams.edit(dream);
+            dreams.edit(dream);
+
+            return send(events.ARCHIVE);
         }
 
-        return dreams.create(dream);
+        dreams.create(dream);
+
+        return send(events.EDITFORM, { dream });
     }
 </script>
 

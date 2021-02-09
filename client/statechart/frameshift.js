@@ -22,7 +22,15 @@ export default Machine({ // eslint-disable-line
         createForm : {
             on : {
                 [events.CREATEFORM] : states.HOME,
-                [events.ARCHIVE]    : states.ARCHIVE
+                [events.EDITFORM]   : {
+                    target  : states.EDITFORM,
+                    actions : [
+                        actions.assign({
+                            editing : true
+                        })
+                    ]
+                },
+                [events.ARCHIVE] : states.ARCHIVE
             },
             meta : {
                 component : DreamForm
