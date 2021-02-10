@@ -5,16 +5,13 @@
 
     const buttons = [
         {
-            name : "+",
+            name : "create",
             send : events.CREATEFORM
         },
         {
-            name : "Dreams",
+            name : "archive",
             send : events.ARCHIVE
-        },
-        // {
-        //     name : "Statistics",
-        // }
+        }
     ];
 
     function handleClick(button) {
@@ -39,7 +36,7 @@
     }
 </style>
 
-<div>
+<div data-testid="nav">
     {#each buttons as button}
         <button data-testid={`${button.name}-nav`} on:click={() => handleClick(button)}>{button.name[0]}</button>
     {/each}

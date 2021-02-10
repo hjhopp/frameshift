@@ -16,5 +16,6 @@ module.exports = {
             functions  : 100,
             lines      : 100
         }
-    }
+    },
+    setupFilesAfterEnv : [ "jest-extended", "<rootDir>/jest-setup.js" ]
 };

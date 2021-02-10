@@ -3,11 +3,7 @@ const events = {
     HOME       : "HOME",
     CREATEFORM : "CREATEFORM",
     EDITFORM   : "EDITFORM",
-    ARCHIVE    : "ARCHIVE",
-
-    // events that do things
-    SAVE   : "SAVE",
-    CREATE : "CREATE"
+    ARCHIVE    : "ARCHIVE"
 };
 
 const states = {

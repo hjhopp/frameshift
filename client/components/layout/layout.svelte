@@ -9,7 +9,7 @@
     }
 </style>
 
-<main>
+<main data-testid="layout">
     <Nav />
     <Children />
 </main>

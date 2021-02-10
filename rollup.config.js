@@ -58,7 +58,14 @@ export default {
         require("rollup-plugin-svelte")({
             dev        : !production,
             extensions : [ ".svelte" ],
-            css        : (css) => css.write("bundle.css")
+            css        : (css) => css.write("bundle.css"),
+            onwarn     : (warning, handler) => {
+                if (process.env.NODE_ENV === "testing") {
+                    return;
+                }
+
+                handler(warning);
+            }
         }),
 
         !production && serve(),

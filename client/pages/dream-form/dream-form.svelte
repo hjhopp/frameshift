@@ -43,7 +43,7 @@
     }
 </style>
 
-<div data-testid="dream-form" transition:fly="{{ y : 200, duration : 400 }}">
+<div data-testid="dream-form" data-editing={editing} transition:fly="{{ y : 200, duration : 400 }}">
     <form on:submit|preventDefault={handleSubmit}>
         <label for="title">Title</label>
         <input type="text" name="title" bind:value={dream.title}>
