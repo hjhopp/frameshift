@@ -1,4 +1,4 @@
-import { dreams, schema, createDream } from "client/stores/dreams";
+import { schema, createDream } from "client/stores/dreams";
 
 import mockDreams from "client/data/dreams";
 
