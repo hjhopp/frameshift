@@ -14,8 +14,10 @@
         }
     ];
 
-    function handleClick(button) {
-        send(button.send);
+    function handleClick(e) {
+        const buttonIdx = e.target.dataset.button;
+
+        send(buttons[buttonIdx].send);
     }
 </script>
 
@@ -37,7 +39,13 @@
 </style>
 
 <div data-testid="nav">
-    {#each buttons as button}
-        <button data-testid={`${button.name}-nav`} on:click={() => handleClick(button)}>{button.name[0]}</button>
+    {#each buttons as button, idx}
+        <button
+            data-testid={`${button.name}-nav`}
+            data-button={idx}
+            on:click={handleClick}
+        >
+            {button.name[0]}
+        </button>
     {/each}
 </div>

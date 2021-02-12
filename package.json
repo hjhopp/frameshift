@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "cross-env NODE_ENV=testing jest --coverage",
+        "test": "jest --coverage",
         "test:watch": "jest --watch",
         "start": "electron .",
         "dev": "rollup -c -w",

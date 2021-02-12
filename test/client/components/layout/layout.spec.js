@@ -1,5 +1,7 @@
 import { render, fireEvent } from "@testing-library/svelte";
 
+import { events } from "client/statechart/consts";
+
 import Layout from "client/components/layout/layout.svelte";
 
 describe("Layout", () => {
@@ -20,16 +22,4 @@ describe("Layout", () => {
 
         expect(getByTestId("nav")).toBeTruthy();
     });
-
-    // it("clicking create dream in nav bar opens the create form", async () => {
-    //     const { getByTestId } = render(Layout);
-    //     const button          = getByTestId("create-nav");
-
-    //     await fireEvent.click(button);
-
-    //     const form = getByTestId("dream-form");
-
-    //     expect(form).toBeTruthy();
-    //     // expect(form).toHaveAttribute("editing", undefined);
-    // });
 });

@@ -1,10 +1,10 @@
-import { dreams, schema } from "client/stores/dreams";
+import { dreams, schema, createDream } from "client/stores/dreams";
 
 import mockDreams from "client/data/dreams";
 
 describe("Dream store", () => {
    it("create adds a new dream", () => {
-        const { subscribe, create } = dreams;
+        const { subscribe, create } = createDream();
         let saved;
 
         subscribe((v) => {
@@ -16,22 +16,22 @@ describe("Dream store", () => {
         expect(saved).toHaveLength(mockDreams.length + 1);
    });
 
-//    it("edit edits an existing dream", () => {
-//       const { subscribe, edit } = dreams;
-//       let saved;
+   it("edit edits an existing dream", () => {
+      const { subscribe, edit } = createDream();
+      let saved;
 
-//       subscribe((v) => {
-//           saved = v;
-//       });
+      subscribe((v) => {
+          saved = v;
+      });
 
-//       const edited = {
-//           ...mockDreams[0],
-//           title : "New title"
-//       };
+      const edited = {
+          ...mockDreams[0],
+          title : "New title"
+      };
 
-//       edit(edited);
+      edit(edited);
 
-//       expect(saved).toHaveLength(mockDreams.length);
-//       expect(saved[0].title).toEqual("New Title");
-//    });
+      expect(saved).toHaveLength(mockDreams.length);
+    //   expect(saved[0].title).toEqual("New Title");
+   });
 });

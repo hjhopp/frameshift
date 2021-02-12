@@ -41,6 +41,7 @@ const schema = {
 };
 
 export {
+    createDream,
     dreams,
     schema
 };
