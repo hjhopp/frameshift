@@ -26,12 +26,12 @@ describe("Dream store", () => {
 
       const edited = {
           ...mockDreams[0],
-          title : "New title"
+          title : "New Title"
       };
 
       edit(edited);
 
       expect(saved).toHaveLength(mockDreams.length);
-    //   expect(saved[0].title).toEqual("New Title");
+      expect(saved[0].title).toEqual("New Title");
    });
 });

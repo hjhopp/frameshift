@@ -1,7 +1,5 @@
 import { render, fireEvent } from "@testing-library/svelte";
 
-import { events } from "client/statechart/consts";
-
 import Layout from "client/components/layout/layout.svelte";
 
 describe("Layout", () => {
@@ -32,5 +30,16 @@ describe("Layout", () => {
         await rerender(Layout);
 
         expect(getByTestId("archive")).toBeTruthy();
+    });
+
+    it("should nav to create form when the create button is pushed", async () => {
+        const { getByTestId, rerender } = render(Layout);
+        const button                    = getByTestId("create-nav");
+
+        await fireEvent.click(button);
+
+        await rerender(Layout);
+
+        expect(getByTestId("dream-form")).toBeTruthy();
     });
 });

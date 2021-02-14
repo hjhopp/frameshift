@@ -19,7 +19,7 @@ function createDream() {
         },
         edit : (data) => {
             update((dreams) => {
-                const idx = dreams.indexOf((dream) => dream.id === data.id);
+                const idx = dreams.findIndex((dream) => dream.id === data.id);
 
                 dreams[idx] = {
                     ...dreams[idx],
