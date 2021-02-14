@@ -22,4 +22,15 @@ describe("Layout", () => {
 
         expect(getByTestId("nav")).toBeTruthy();
     });
+
+    it("should nav to archive when the archive button is pushed", async () => {
+        const { getByTestId, rerender } = render(Layout);
+        const button                    = getByTestId("archive-nav");
+
+        await fireEvent.click(button);
+
+        await rerender(Layout);
+
+        expect(getByTestId("archive")).toBeTruthy();
+    });
 });

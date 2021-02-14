@@ -7,6 +7,8 @@
     import { events } from "client/statechart/consts";
 
     function handleClick(dream) {
+        console.log("YO ya boi has been clicked");
+
         send(events.EDITFORM, { dream });
     }
 </script>
