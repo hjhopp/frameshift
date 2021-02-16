@@ -1,4 +1,4 @@
-import { render, fireEvent } from "@testing-library/svelte";
+import { render } from "@testing-library/svelte";
 
 import Layout from "client/components/layout/layout.svelte";
 

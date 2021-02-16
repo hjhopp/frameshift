@@ -58,9 +58,10 @@
 </style>
 
 <div data-testid="archive" class="archive">
-    {#each $dreams as dream}
+    {#each $dreams as dream, idx}
         <div
             class="dream"
+            data-testid={`dream-${idx}`}
             transition:fly="{{ y : 200, duration : 400 }}"
             on:click={() => handleClick(dream)}
         >

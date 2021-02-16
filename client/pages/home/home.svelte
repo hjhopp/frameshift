@@ -26,7 +26,7 @@
     }
 </style>
 
-<div transition:fade>
+<div data-testid="home" transition:fade>
     <h1>Frameshift</h1>
     <h2>a dream journal</h2>
 </div>

@@ -2,7 +2,7 @@
 
 Dream journal.
 
-# Tech
+## Tech
 
 - Electron
 - Express
