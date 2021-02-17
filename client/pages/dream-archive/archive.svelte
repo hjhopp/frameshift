@@ -41,6 +41,7 @@
         bottom: 13px;
 
         width: 100%;
+        height: 4rem;
 
         background-color: rgb(255, 255, 255, 0.5);
     }
@@ -48,6 +49,15 @@
     h1 {
         margin: 0;
         padding-left: 0.25em;
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+
+        font-family: Tox;
+        font-size: 2rem;
+        padding-left: 0.25rem;
     }
 
     img {
@@ -67,7 +77,9 @@
         >
             <img src={dream.image} alt={dream.title}/>
             <div class="title">
-                <h1>{dream.title}</h1>
+                <svg>
+                    <text x="0" y="60%" font-size-adjust="0.58">{dream.title}</text>
+                </svg>
             </div>
         </div>
     {/each}
