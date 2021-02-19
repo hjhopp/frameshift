@@ -46,11 +46,6 @@
         background-color: rgb(255, 255, 255, 0.5);
     }
 
-    h1 {
-        margin: 0;
-        padding-left: 0.25em;
-    }
-
     svg {
         width: 100%;
         height: 100%;
