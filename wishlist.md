@@ -21,6 +21,11 @@
 1.  Locally if no wish to sign up
 2.  Option to sync with a cloud service
 3.  Export to user-friendly .pdf or .zip
+4.  GDPR compliance
+    - Encryption
+    - Data protection
+    - Communicating this to a user...
+    - Make it easy to give a user everything we have saved
 
 ## Social
 

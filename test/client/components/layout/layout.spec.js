@@ -9,12 +9,6 @@ describe("Layout", () => {
         expect(getByTestId("layout")).toBeTruthy();
     });
 
-    it("should render initial welcome screen", () => {
-        const { getByText } = render(Layout);
-
-        expect(getByText("Frameshift")).toBeTruthy();
-    });
-
     it("should render nav bar", () => {
         const { getByTestId } = render(Layout);
 

@@ -74,9 +74,9 @@ describe("Navigation", () => {
 
 //         const dream = getByTestId("dream-0");
 
-//         await fireEvent.click(dream);
-//         await rerender(App);
+//         const value = await fireEvent.click(dream);
+//         // await rerender(App);
 
-//         expect(getByTestId("dream-form")).toBeTruthy();
+//         expect(value).toBeTruthy();
 //     });
 // });
